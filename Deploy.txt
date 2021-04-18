@@ -21,4 +21,6 @@ $ cd <your-pythonanywhere-domain>.pythonanywhere.com
 $ git pull
 [...]
 
+em caso de erro: $ git reset --hard
+
 (Lembre-se de substituir <your-pythonanywhere-domain> pelo seu subdomínio PythonAnywhere, mas sem os colchetes angulares, ou seja, sem < e >).
