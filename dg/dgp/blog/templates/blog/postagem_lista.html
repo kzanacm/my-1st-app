@@ -1,22 +1,19 @@
-<html>
-    <head>
-        <title>Blog Django Girls</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Blog Django Girls</a></h1>
-        </div>
-
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Meu primeiro post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Meu segundo post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
-</html>
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block b-aba %}•Postagens{% endblock %}
+{% block b-css %}{% endblock %}
+{% block b-titulo %}BLOG - DG{% endblock %}
+{% block b-corpo %}
+    <div>
+        <hr>
+        {% for postagem in Postagens %}
+            <span><a href="">{{ postagem.ptg_nm_postagem }}</a></span>
+            <span>     {{ postagem.ptg_id_autor }}, </span>
+            <span>{{ postagem.ptg_ts_criacao }}</span><br>
+            <!--<span>alterado em: {{ postagem.ptg_ts_criacao }}</span>-->
+            <span>        {{ postagem.ptg_ds_postagem|linebreaksbr }}</span>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block b-js %}{% endblock %}

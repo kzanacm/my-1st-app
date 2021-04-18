@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="Uf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block b-aba %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block b-css %}{% endblock %}
+    </head>
+    <body>
+        <h1>{% block b-titulo %}{% endblock %}</h1>
+        {% block b-corpo %}{% endblock %}
+        <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+        {% block b-js %}{% endblock %}
+    </body>
+</html>
