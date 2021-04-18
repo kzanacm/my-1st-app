@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block b-aba %}•Postagem{% endblock %}
+{% block b-css %}{% endblock %}
+{% block b-titulo %}BLOG - DG - Detalhes{% endblock %}
+{% block b-corpo %}
+    <div>
+        <hr>
+        {% if postagem.ptg_ts_criacao %}
+            <div class="date">{{ postagem.ptg_ts_criacao }}</div>
+        {% endif %}
+        <span>     {{ postagem.ptg_id_autor }}, </span>
+        <h2>{{ postagem.ptg_nm_postagem }}</h2>
+        <p>{{ postagem.ptg_ds_postagem|linebreaksbr }}</p>
+        <a href="{% url 'hpostagem_lista' %}">Voltar</a>
+    </div>
+{% endblock %}
+{% block b-js %}{% endblock %}

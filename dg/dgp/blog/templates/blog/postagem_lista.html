@@ -1,12 +1,12 @@
 {% extends 'blog/base.html' %}
 {% block b-aba %}•Postagens{% endblock %}
 {% block b-css %}{% endblock %}
-{% block b-titulo %}BLOG - DG{% endblock %}
+{% block b-titulo %}BLOG - DG - Lista{% endblock %}
 {% block b-corpo %}
     <div>
         <hr>
-        {% for postagem in Postagens %}
-            <span><a href="">{{ postagem.ptg_nm_postagem }}</a></span>
+        {% for postagem in postagens %}
+            <span><a href="{% url 'hpostagem_detalhe' pk=postagem.pk %}">{{ postagem.ptg_nm_postagem }}</a></span>
             <span>     {{ postagem.ptg_id_autor }}, </span>
             <span>{{ postagem.ptg_ts_criacao }}</span><br>
             <!--<span>alterado em: {{ postagem.ptg_ts_criacao }}</span>-->
