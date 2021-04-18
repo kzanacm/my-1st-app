@@ -1,0 +1,6 @@
+{
+    "python.venvPath": "..\\systst6\\Scripts\\activate.bat",
+    "python.pythonPath": "..\\systst6\\Scripts\\python.exe",
+    "http.proxy": "http://christians_prudenprev:c92n4i9c@192.0.6.6:3128",
+    "http.proxyStrictSSL": false
+}
