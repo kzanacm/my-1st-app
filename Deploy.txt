@@ -1,0 +1,24 @@
+Aqui está um resumo dos passos…
+
+    Primeiro, envie seu código para o Github
+
+command-line
+
+$ git status
+[...]
+$ git add --all .
+$ git status
+[...]
+$ git commit -m "Modified templates to display posts from database."
+[...]
+$ git push
+
+    Em seguida, faça login em PythonAnywhere e vá para seu console de Bash (ou comece um novo) e execute:
+
+PythonAnywhere command-line
+
+$ cd <your-pythonanywhere-domain>.pythonanywhere.com
+$ git pull
+[...]
+
+(Lembre-se de substituir <your-pythonanywhere-domain> pelo seu subdomínio PythonAnywhere, mas sem os colchetes angulares, ou seja, sem < e >).
